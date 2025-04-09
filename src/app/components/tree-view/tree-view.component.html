@@ -1,0 +1,29 @@
+<ul>
+  @for (node of nodes; track node.id) {
+    <li>
+      <div
+        (click)="onClickNode(node)"
+        [class.deleted]="node.is_deleted"
+        class="tree-node"
+        [class.isExpanded]="isExpanded(node.id)"
+        [class.isDisclosed]="isDisclosed(node.children)"
+      >
+        @if (isDisclosed(node.children)) {
+          @if (isExpanded(node.id)) {
+            <tree-view-arrow-up-icon />
+          } @else {
+            <tree-view-arrow-down-icon />
+          }
+        } @else {
+          <span class="no-arrow">•</span>
+        }
+
+        {{ node.id }} - {{ node.title }}
+      </div>
+
+      @if (isExpanded(node.id)) {
+        <app-tree-view [nodes]="node.children" />
+      }
+    </li>
+  }
+</ul>

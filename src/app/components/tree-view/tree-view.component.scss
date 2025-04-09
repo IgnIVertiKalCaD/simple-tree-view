@@ -1,0 +1,41 @@
+:host {
+  ul {
+    list-style-type: none;
+    padding-left: 1rem;
+  }
+
+  .tree-node {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.5em 2em;
+    margin: 4px 0;
+
+    border-radius: 0.4em;
+
+    user-select: none;
+  }
+
+  .tree-node:hover {
+    background-color: #f2f2f2;
+  }
+
+  .isExpanded {
+    background-color: #f2f2f2;
+  }
+
+  .isDisclosed {
+    cursor: pointer;
+  }
+
+  .deleted {
+    cursor: default;
+    color: gray;
+  }
+
+  .no-arrow {
+    cursor: default;
+    display: inline-block;
+    width: 1em;
+  }
+}
