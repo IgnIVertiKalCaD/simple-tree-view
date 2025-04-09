@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { TreeNode } from "../models/tree-node.model";
+import { TreeNode } from "./models/tree-node.model";
 
 @Component({
   selector: "tree-view-arrow-up-icon",

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { TreeViewComponent } from "./components/tree-view/tree-view.component";
-import { TreeNode } from "./components/models/tree-node.model";
+import { TreeNode } from "./components/tree-view/models/tree-node.model";
 import payload from "./payload.json";
 
 @Component({
